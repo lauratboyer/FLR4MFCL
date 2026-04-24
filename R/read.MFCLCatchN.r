@@ -6,7 +6,7 @@
                     
 read.MFCLCatchN <- function(file="ests.rep", first.yr=1972, quarterly=TRUE){
 
-  splitter2 <- function(...) {
+  splitter2 <- function(txt, label) {
     if(!any(txt == label))
       stop("label '", label, "' not found in ", basename(file))
     row.num <- match(label, txt) + 1  # first line following the label
